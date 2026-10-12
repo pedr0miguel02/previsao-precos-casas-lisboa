@@ -1,0 +1,41 @@
+# ===========================================================================
+# DADOS — NUNCA PUBLICAR
+# Os dados de anúncios (brutos e limpos) ficam apenas no computador local.
+# ===========================================================================
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Proteção extra: qualquer CSV, Excel ou Parquet em qualquer pasta é ignorado,
+# exceto a tabela de resultados agregados dos modelos (não contém anúncios).
+*.csv
+*.xlsx
+*.xls
+*.parquet
+!reports/resultados_modelos.csv
+
+# Modelos treinados (ficheiros binários, recriados pelo notebook 03)
+models/*
+!models/.gitkeep
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Pasta temporária de ficheiros a apagar
+_to_delete/
+
+# Cópia limpa usada para publicar pelo site do GitHub
+para_github/
