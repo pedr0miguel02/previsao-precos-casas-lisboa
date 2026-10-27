@@ -1,0 +1,11 @@
+# Dados: nunca publicar
+data/
+*.csv
+
+# Modelos (criados pelos notebooks)
+models/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
